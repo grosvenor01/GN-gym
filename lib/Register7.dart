@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gym_app/Register.dart';
 import 'package:gym_app/Register3.dart';
+import 'package:gym_app/Register6.dart';
 import 'dart:io'; // FOR ACCESSING AND FILE MANIPULATION
 import 'package:image_picker/image_picker.dart';
 
@@ -73,7 +74,7 @@ class _Register7State extends State<Register7> {
                     ),
                   ],
                 ),
-              ), 
+              ),
             ])),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -83,8 +84,10 @@ class _Register7State extends State<Register7> {
               width: 159,
               child: ElevatedButton(
                 onPressed: () => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Register()))
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Register6()))
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(82, 81, 76, 1),
@@ -108,7 +111,7 @@ class _Register7State extends State<Register7> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Register3()))
+                          builder: (context) => const Register7()))
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(244, 206, 20, 1),
@@ -130,8 +133,9 @@ class _Register7State extends State<Register7> {
   Future pick_image_gallery() async {
     final returnedpic =
         await ImagePicker().pickImage(source: ImageSource.gallery);
+    /*if(returnedpic == null) return;
     setState(() {
       image = File(returnedpic!.path);
-    });
+    });*/
   }
 }
