@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gym_app/Register.dart';
 import 'package:gym_app/Register3.dart';
 import 'package:gym_app/Register6.dart';
+import 'package:gym_app/Routines.dart';
+import 'package:gym_app/Workout.dart';
+import 'package:gym_app/food.dart';
+import 'package:gym_app/learning.dart';
 import 'dart:io'; // FOR ACCESSING AND FILE MANIPULATION
 import 'package:image_picker/image_picker.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart'; 
 
 class Register7 extends StatefulWidget {
   const Register7({super.key});
@@ -18,124 +24,234 @@ class _Register7State extends State<Register7> {
   File? image;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-            height: MediaQuery.of(context).size.height * 0.9,
-            child: Column(children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-              const Text(
-                "Full Your Profile",
-                style: TextStyle(
-                  decoration: TextDecoration.none,
-                  fontFamily: "Poppins",
-                  fontSize: 25,
-                  color: Colors.white,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 0),
-                child: Text(
-                  "Finalising your profile by giving your information bellow ",
-                  style: TextStyle(
-                    decoration: TextDecoration.none,
-                    fontFamily: "Medium",
-                    fontSize: 18,
-                    color: Color.fromRGBO(217, 217, 217, 1),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              const SizedBox(height: 5),
-              Container(
-                width: 110,
-                height: 110,
-                child: Stack(
-                  children: [
-                    const CircleAvatar(
-                      radius: 50,
-                      backgroundImage: AssetImage('assets/background.png'),
-                    ),
-                    Positioned(
-                      bottom: -2,
-                      right: -2,
-                      child: FloatingActionButton(
-                        mini: true,
-                        backgroundColor: Color.fromRGBO(244, 206, 20, 1),
-                        onPressed: () {
-                          //faut nzidou wach ysra ki y3abez
-                          pick_image_gallery();
-                        },
-                        child: const Icon(
-                          Icons.add,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ])),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+        backgroundColor: Colors.black,
+        body: ListView(
           children: [
             Container(
-              height: 52,
-              width: 159,
-              child: ElevatedButton(
-                onPressed: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Register6()))
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromRGBO(82, 81, 76, 1),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30))),
-                child: const Text("< Back",
+                height: MediaQuery.of(context).size.height * 0.9,
+                child: Column(children: [
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  const Text(
+                    "Full Your Profile",
                     style: TextStyle(
-                        color: Colors.white,
+                      decoration: TextDecoration.none,
+                      fontFamily: "Poppins",
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 0),
+                    child: Text(
+                      "Finalising your profile by giving your information bellow ",
+                      style: TextStyle(
+                        decoration: TextDecoration.none,
+                        fontFamily: "Medium",
+                        fontSize: 18,
+                        color: Color.fromRGBO(217, 217, 217, 1),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 110,
+                    height: 110,
+                    child: Stack(
+                      children: [
+                        const CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('assets/background.png'),
+                        ),
+                        Positioned(
+                          bottom: -2,
+                          right: -2,
+                          child: FloatingActionButton(
+                            mini: true,
+                            backgroundColor: Color.fromRGBO(244, 206, 20, 1),
+                            onPressed: () {
+                              //faut nzidou wach ysra ki y3abez
+                              pick_image_gallery();
+                            },
+                            child: const Icon(
+                              Icons.add,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.9,
+                    height: 57,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    child:const Padding(
+                      padding: EdgeInsets.only(left: 10 , top: 5),
+                      child : TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                          hintText: "Full Name",
+                          hintStyle: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 15,
+                            color: Color.fromRGBO(138, 138, 138, 1)
+                          )
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.9,
+                    height: 57,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    child:const Padding(
+                      padding: EdgeInsets.only(left: 10 , top: 5),
+                      child : TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                          hintText: "Email",
+                          hintStyle: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 15,
+                            color: Color.fromRGBO(138, 138, 138, 1)
+                          )
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.9,
+                    height: 57,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    child:const Padding(
+                      padding: EdgeInsets.only(left: 10 , top: 5),
+                      child : TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+
+                          hintText: "Password",
+                          hintStyle: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 15,
+                            color: Color.fromRGBO(138, 138, 138, 1)
+                          )
+                        ),
+                      )
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.of(context).size.width*0.9,
+                    height: 57,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(30, 30, 30, 1),
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: InternationalPhoneNumberInput(
+                      onInputChanged: (value) => print(value),
+                      selectorTextStyle: const TextStyle(
                         fontFamily: "Poppins",
-                        fontSize: 20)),
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.05,
-            ),
-            Container(
-              height: 52,
-              width: 159,
-              child: ElevatedButton(
-                onPressed: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Register7()))
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromRGBO(244, 206, 20, 1),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30))),
-                child: const Text("Next >",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "Poppins",
-                        fontSize: 20)),
-              ),
-            ),
+                        fontSize: 15,
+                        color: Color.fromRGBO(138, 138, 138, 1)
+                      ),
+                      inputBorder: InputBorder.none,
+                      initialValue: PhoneNumber(isoCode: "DZ"),
+                      inputDecoration: const InputDecoration(
+                        border: InputBorder.none,
+                        hintText: '123456789',
+                        hintStyle: TextStyle(
+                          fontFamily: "Poppins",
+                          color: Color.fromRGBO(138, 138, 138, 1),
+                          fontSize: 15,
+                        ),
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 12,
+                          horizontal: 5,
+                        ),
+                      ),
+                      
+
+                    ),
+                    
+                  ),
+                ])),
+                
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 52,
+                  width: 159,
+                  child: ElevatedButton(
+                    onPressed: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Register6()))
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(82, 81, 76, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30))),
+                    child: const Text("< Back",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: "Poppins",
+                            fontSize: 20)),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.05,
+                ),
+                Container(
+                  height: 52,
+                  width: 159,
+                  child: ElevatedButton(
+                    onPressed: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Learning()))
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(244, 206, 20, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30))),
+                    child: const Text("Next >",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: "Poppins",
+                            fontSize: 20)),
+                  ),
+                ),
+              ],
+            )
           ],
-        )
-      ],
-    );
+        ));
   }
 
   Future pick_image_gallery() async {
     final returnedpic =
         await ImagePicker().pickImage(source: ImageSource.gallery);
-    /*if(returnedpic == null) return;
+    if (returnedpic == null) return;
     setState(() {
       image = File(returnedpic!.path);
-    });*/
+    });
   }
 }
