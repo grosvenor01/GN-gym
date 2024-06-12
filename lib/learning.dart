@@ -1,5 +1,6 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:gym_app/reciepe.dart";
 
 class Learning extends StatefulWidget {
   const Learning({super.key});
@@ -52,21 +53,28 @@ class _LearningState extends State<Learning> {
                 width: 160,
                 margin: const EdgeInsets.only(left: 26, top: 26),
                 child: ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => Reciepe()))
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           height: 124,
-                          width: 160,
+                          width: 124,
                           decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage("assets/plat1.png"),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fill)),
                         ),
                         SizedBox(
                           height: 5,
@@ -98,9 +106,287 @@ class _LearningState extends State<Learning> {
                         )
                       ],
                     )),
-              )
+              ),
+              Container(
+                height: 217,
+                width: 160,
+                margin: const EdgeInsets.only(left: 26, top: 26),
+                child: ElevatedButton(
+                    onPressed: () => {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/plat1.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          "Lorem ipsum dolor sit amet Lorem",
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              color: Color.fromRGBO(138, 138, 138, 1)),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "10 carb/g",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 130, 5, 1),
+                                  fontSize: 13),
+                            ),
+                            SizedBox(
+                              width: 35,
+                            ),
+                            Icon(
+                              Icons.bakery_dining_rounded,
+                              size: 25,
+                              color: Colors.red,
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
             ],
-          )
+          ),
+          Row(
+            children: [
+              Container(
+                height: 217,
+                width: 160,
+                margin: const EdgeInsets.only(left: 26, top: 26),
+                child: ElevatedButton(
+                    onPressed: () => {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/plat1.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          "Lorem ipsum dolor sit amet Lorem",
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              color: Color.fromRGBO(138, 138, 138, 1)),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "10 carb/g",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 130, 5, 1),
+                                  fontSize: 13),
+                            ),
+                            SizedBox(
+                              width: 35,
+                            ),
+                            Icon(
+                              Icons.bakery_dining_rounded,
+                              size: 25,
+                              color: Colors.red,
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
+              Container(
+                height: 217,
+                width: 160,
+                margin: const EdgeInsets.only(left: 26, top: 26),
+                child: ElevatedButton(
+                    onPressed: () => {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/plat1.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          "Lorem ipsum dolor sit amet Lorem",
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              color: Color.fromRGBO(138, 138, 138, 1)),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "10 carb/g",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 130, 5, 1),
+                                  fontSize: 13),
+                            ),
+                            SizedBox(
+                              width: 35,
+                            ),
+                            Icon(
+                              Icons.bakery_dining_rounded,
+                              size: 25,
+                              color: Colors.red,
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                height: 217,
+                width: 160,
+                margin: const EdgeInsets.only(left: 26, top: 26),
+                child: ElevatedButton(
+                    onPressed: () => {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/plat1.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          "Lorem ipsum dolor sit amet Lorem",
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              color: Color.fromRGBO(138, 138, 138, 1)),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "10 carb/g",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 130, 5, 1),
+                                  fontSize: 13),
+                            ),
+                            SizedBox(
+                              width: 35,
+                            ),
+                            Icon(
+                              Icons.bakery_dining_rounded,
+                              size: 25,
+                              color: Colors.red,
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
+              Container(
+                height: 217,
+                width: 160,
+                margin: const EdgeInsets.only(left: 26, top: 26),
+                child: ElevatedButton(
+                    onPressed: () => {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage("assets/plat1.png"),
+                                  fit: BoxFit.fill)),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          "Lorem ipsum dolor sit amet Lorem",
+                          style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 13,
+                              color: Color.fromRGBO(138, 138, 138, 1)),
+                        ),
+                        const Row(
+                          children: [
+                            Text(
+                              "10 carb/g",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 130, 5, 1),
+                                  fontSize: 13),
+                            ),
+                            SizedBox(
+                              width: 35,
+                            ),
+                            Icon(
+                              Icons.bakery_dining_rounded,
+                              size: 25,
+                              color: Colors.red,
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
+            ],
+          ),
         ],
       ),
     );

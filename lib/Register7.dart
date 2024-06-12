@@ -8,6 +8,7 @@ import 'package:gym_app/Routines.dart';
 import 'package:gym_app/Workout.dart';
 import 'package:gym_app/food.dart';
 import 'package:gym_app/learning.dart';
+import 'package:gym_app/nav.dart';
 import 'dart:io'; // FOR ACCESSING AND FILE MANIPULATION
 import 'package:image_picker/image_picker.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart'; 
@@ -227,7 +228,7 @@ class _Register7State extends State<Register7> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Learning()))
+                              builder: (context) => const nav()))
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(244, 206, 20, 1),
