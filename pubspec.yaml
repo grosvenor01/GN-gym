@@ -62,6 +62,12 @@ flutter:
     - assets/flag.png
     - assets/plat1.png
     - assets/plat2.png
+    - assets/Recipes.json
+    - assets/Workout.json
+    - assets/Food/
+    - assets/Workout/gain weight/
+    - assets/Workout/improve endurance/
+    - assets/Workout/lose weight/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

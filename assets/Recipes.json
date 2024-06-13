@@ -1,0 +1,91 @@
+[
+    {
+        "Time": "15min",
+        "Calories": "-",
+        "Rate": 4.5,
+        "Name": "Creamy Tuna Pasta Salad",
+        "Description": "Cook the pasta according to package directions, then drain and set aside in a large bowl to cool.Place all sauce/dressing ingredients into a blender or food processor and pulse until smooth and well combined.Taste and adjust the seasoning. Pour the sauce over the pasta, and stir in the celery, peas, and tuna. Then, mix with a spatula until nicely coated.Finally, divide into bowls and enjoy!",
+        "image": "image1",
+        "Ingredients": {
+            "pasta": "Whole wheat pasta or gluten-free pasta",
+            "celery_stalks": "Fresh celery stalks",
+            "frozen_green_peas": "Thawed",
+            "tuna": "Tuna in Olive Oil, 1 jar, drained and flaked",
+            "red_onion": "Thinly sliced (To garnish)",
+            "dressing": {
+                "avocado": "Very ripe",
+                "yogurt": "Plain Greek yogurt or plain yogurt",
+                "dill": "Chopped Fresh Dill, plus more to garnish",
+                "lemon_juice": "Lemon, juiced",
+                "dijon_mustard": "Dijon Mustard",
+                "garlic": "Garlic Cloves, minced (Please use fresh)",
+                "chili_flakes": "Chili Flakes, or to taste (I didn't add in video because my kids will nag)",
+                "salt_and_pepper": "Kosher salt and pepper, to taste"
+            }
+        }
+    },
+    {
+        "Time": "30 min",
+        "Calories": "450",
+        "Rate": 4.7,
+        "Name": "Air Fryer Fish and Fries",
+        "Description": "Preheat the air fryer to 375F.\nWash and cut the potatoes. Rinse and scrub the potatoes thoroughly to remove any dirt. Pat the excess moisture with a paper towel, then cut the potatoes into wedges and place them into a large bowl.\nSeason the potatoes. Drizzle the potatoes with olive oil and then season with salt and pepper. Toss well to evenly coat all pieces.\nCook the potatoes. Place the fries in a single layer into the bottom of your air fryer basket. Try not to stack them on top of each other, because the more separated the fries, the crispier they will be. Cook the fries at 400F for 20 minutes, tossing after 10 minutes to make sure they crisp up evenly. Once done, transfer the wedges to a platter and cover to keep warm.\nPrepare fish and dipping stations. While potatoes are cooking, set up three stations, First, in a shallow bowl beat eggs until frothy. Then place the flour into a shallow dish and panko breadcrumbs on a large plate.\nBread the fish. First, dredge the fish fillets in the flour, shaking off any excess. Then dip the fillets into the beaten egg; allowing excess to drip off. Last, coat each fish fillet in bread crumbs, patting to help the coating adhere.",
+        "image": "image2",
+        "Ingredients": {
+            "white_fish_fillet": "White fish fillet (like cod, tilapia, or sea bass)",
+            "panko_breadcrumbs": "Panko breadcrumbs: you can use homemade breadcrumbs too if you like instead of store bought",
+            "egg": "Egg: used for the breading",
+            "gluten_free_flour": "Gluten-free flour: or any other flour will work",
+            "salt_and_pepper": "Kosher salt and Ground black pepper",
+            "olive_oil": "Olive oil: or avocado oil",
+            "russet_potatoes": "Russet potatoes: or use any potatoes you like",
+            "parsley": "Fresh parsley"
+        }
+    },
+    {
+        "Time": "1 hour 15 min",
+        "Calories": "390",
+        "Rate": 4.5,
+        "Name": "Chipotle Chicken Al Pastor",
+        "Description": "Make the marinade/sauce: In a small food process add the chipotle peppers with the adobo sauce, oil, salt, pepper, and seasonings. Process until almost smooth and combined.\nMarinate the chicken: Place chopped chicken in a large bowl and add in the chipotle mixture. Stir well to coat each piece. Allow the meat to marinate for 1 hour overnight (in the fridge).\nCook the chicken: When ready to cook, allow the meat to reach room temp by keeping it over the counter for 15-20 minutes. Heat a large skillet over medium heat. Cook the marinated chicken thighs until golden brown and the internal temp reaches 165F. Serve over cooked rice and enjoy!",
+        "image": "image4",
+        "Ingredients": {
+            "chipotle_peppers": "chipotle peppers in adobo sauce: these are canned",
+            "olive_oil": "olive oil: or you may use any other oil of choice",
+            "salt_and_pepper": "Kosher salt and pepper, to taste",
+            "seasonings": "Seasonings: ground coriander, cumin, garlic powder",
+            "chicken_thighs": "boneless, skinless chicken thighs"
+        }
+    },
+    {
+        "Time": "30 min",
+        "Calories": "450",
+        "Rate": 4.7,
+        "Name": "Chicken Cutlet Sandwich",
+        "Description": "Prep the meat: Cut the chicken breasts in half and lightly pound with a mallet to reach to an even thickness. This will also tenderize the meat.\nSeason and dredge in flour: Season the chicken cutlets with salt and pepper on both sides, then dredge into the flour.\nDip into eggs, and then into breadcrumbs: Dip them into beaten eggs, allowing the excess to drip back; dredge into the breadcrumbs, making sure the cutlets are evenly coated on all sides.\nHeat skillet: Preheat a large non-stick pan over medium heat and drizzle with the oil.\nHeat oven: Preheat the oven to 400ºF and line a sheet pan with parchment paper.\nCook the chicken: Cook the cutlets, in batches, in the pan until just golden; transfer to the prepared sheet pan and bake for 12 minutes, or until the internal temp reaches 165ºF.",
+        "image": "image5",
+        "Ingredients": {
+            "chicken": "Chicken: I sliced boneless skinless breasts in half to make cutlets, and lightly pounded them to even thickness.",
+            "salt_and_pepper": "Salt & pepper: To season the chicken.",
+            "flour": "Flour: Dredge the chicken in whole wheat flour or all-purpose flour.",
+            "eggs": "Eggs: Dipping the chicken into beaten eggs will help the breadcrumbs adhere to the chicken better.",
+            "breadcrumbs": "Breadcrumbs: For a crispy outer layer on the chicken.",
+            "olive_oil": "Olive oil: For cooking the chicken.",
+            "bread": "Toasted bread: Use any favorite bread for making your sandwich.",
+            "sauce": "Sauce: My tasty homemade sauce includes a mix of mayonnaise, barbecue sauce, and dijon mustard.",
+            "pickles": "Pickles: a must unless you hate it 😅"
+        }
+    },
+    {
+        "Time": "50 min",
+        "Calories": "300",
+        "Rate": 4.8,
+        "Name": "Balsamic Chicken Breast",
+        "Description": "Marinade the chicken – Place all the marinade ingredients in a ziplock bag, then add the chicken. Allow it to marinate in the fridge for at least 15 mins.\nTo Bake – Gently flatten the chicken with a meat mallet, place on a baking dish and bake for 35 mins.\nTo Grill – Add chicken breast onto the preheated grill and cook for 5-7 minutes on each side.\nServe and enjoy!",
+        "image": "image6",
+        "Ingredients": {
+            "chicken": "Chicken Breasts: Skinless and boneless. You can also use chicken thighs",
+            "marinade": "For the Marinade: Olive oil, low sodium soy, balsamic vinegar, garlic, oregano, salt, and pepper."
+        }
+    }
+]
