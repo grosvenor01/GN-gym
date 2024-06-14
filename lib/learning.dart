@@ -15,10 +15,9 @@ class Learning extends StatefulWidget {
 
 class _LearningState extends State<Learning> {
   int number = 0;
-  var jsonData=[];
+  var jsonData = [];
   @override
   Widget build(BuildContext context) {
-    jsonLength();
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -53,198 +52,235 @@ class _LearningState extends State<Learning> {
                   fontFamily: "Poppins", fontSize: 16, color: Colors.white),
             ),
           ),
-          for (int i = 0; i < number ~/ 2; i++)
-            Row(
-              children: [
-                Container(
-                  height: 217,
-                  width: 160,
-                  margin: const EdgeInsets.only(left: 26, top: 26),
-                  child: ElevatedButton(
-                      onPressed: () => {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Reciepe()))
-                          },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 124,
-                            width: 124,
-                            decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage("assets/plat1.png"),
-                                    fit: BoxFit.fill)),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          const Text(
-                            "",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 13,
-                                color: Color.fromRGBO(138, 138, 138, 1)),
-                          ),
-                          const Row(
-                            children: [
-                              Text(
-                                "10 carb/g",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(0, 130, 5, 1),
-                                    fontSize: 13),
-                              ),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Icon(
-                                Icons.bakery_dining_rounded,
-                                size: 25,
-                                color: Colors.red,
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-                Container(
-                  height: 217,
-                  width: 160,
-                  margin: const EdgeInsets.only(left: 26, top: 26),
-                  child: ElevatedButton(
-                      onPressed: () => {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 124,
-                            width: 124,
-                            decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage("assets/plat1.png"),
-                                    fit: BoxFit.fill)),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          const Text(
-                            "Lorem ipsum dolor sit amet Lorem",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 13,
-                                color: Color.fromRGBO(138, 138, 138, 1)),
-                          ),
-                          const Row(
-                            children: [
-                              Text(
-                                "10 carb/g",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(0, 130, 5, 1),
-                                    fontSize: 13),
-                              ),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Icon(
-                                Icons.bakery_dining_rounded,
-                                size: 25,
-                                color: Colors.red,
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-              ],
-            ),
-          if (number % 2 == 1)
-            Row(
-              children: [
-                Container(
-                  height: 217,
-                  width: 160,
-                  margin: const EdgeInsets.only(left: 26, top: 26),
-                  child: ElevatedButton(
-                      onPressed: () => {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Reciepe()))
-                          },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 124,
-                            width: 124,
-                            decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage("assets/plat1.png"),
-                                    fit: BoxFit.fill)),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          const Text(
-                            "Lorem ipsum dolor sit amet Lorem",
-                            style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 13,
-                                color: Color.fromRGBO(138, 138, 138, 1)),
-                          ),
-                          const Row(
-                            children: [
-                              Text(
-                                "10 carb/g",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(0, 130, 5, 1),
-                                    fontSize: 13),
-                              ),
-                              SizedBox(
-                                width: 35,
-                              ),
-                              Icon(
-                                Icons.bakery_dining_rounded,
-                                size: 25,
-                                color: Colors.red,
-                              )
-                            ],
-                          )
-                        ],
-                      )),
-                ),
-              ],
-            )
+          FutureBuilder(
+              future: jsonLength(),
+              builder: (ctx, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text("Error Occured"));
+                } else {
+                  final dady = snapshot.data!;
+                  return Column(
+                    children: [
+                      for (int i = 0; i < number-1 ; i=i+2)
+                        Row(
+                          children: [
+                            Container(
+                              height: 217,
+                              width: 160,
+                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              child: ElevatedButton(
+                                  onPressed: () => {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Reciepe()))
+                                      },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    padding: EdgeInsets.zero,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        height: 124,
+                                        decoration: BoxDecoration(
+                                            borderRadius:  BorderRadius.only(topLeft: Radius.circular(15),topRight:Radius.circular(15) ),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/Food/"+jsonData[i]['image']+".png"),
+                                                fit: BoxFit.cover)),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 5,right: 10,left: 10),
+                                        child : Text(
+                                        jsonData[i]["Name"],
+                                        style: const TextStyle(
+                                            fontFamily: "Poppins",
+                                            fontSize: 13,
+                                            color: Color.fromRGBO(
+                                                138, 138, 138, 1)),
+                                      ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          SizedBox(width: 10,),
+                                          Text(
+                                            dady[i]['Calories']+" Cal",
+                                            style: const TextStyle(
+                                                color: Color.fromRGBO(
+                                                    0, 130, 5, 1),
+                                                fontSize: 13),
+                                          ),
+                                          const SizedBox(width: 60,),
+                                          const Icon(
+                                            Icons.bakery_dining_rounded,
+                                            size: 25,
+                                            color: Colors.red,
+                                          ),
+                                          SizedBox(width: 10),
+                                        ],
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            Container(
+                              height: 217,
+                              width: 160,
+                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              child: ElevatedButton(
+                                  onPressed: () => {},
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    padding: EdgeInsets.zero,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 124,
+                                        decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight:Radius.circular(15) ),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/Food/"+jsonData[i+1]['image']+".png"),
+                                                fit: BoxFit.cover)),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 5,right: 10,left: 10),
+                                        child: Text(
+                                          jsonData[i+1]["Name"],
+                                          style: const TextStyle(
+                                              fontFamily: "Poppins",
+                                              fontSize: 13,
+                                              color: Color.fromRGBO(
+                                                  138, 138, 138, 1)),
+                                        ),
+                                      ),
+                                      
+                                      Row(
+                                        children: [
+                                          SizedBox(width: 10),
+                                          Text(
+                                            jsonData[i+1]["Calories"]+" Cal",
+                                            style: const TextStyle(
+                                                color: Color.fromRGBO(
+                                                    0, 130, 5, 1),
+                                                fontSize: 13),
+                                          ),
+                                          const SizedBox(
+                                            width: 60,
+                                          ),
+                                          const Icon(
+                                            Icons.bakery_dining_rounded,
+                                            size: 25,
+                                            color: Colors.red,
+                                          ),
+                                          SizedBox(width: 10,)
+                                        ],
+                                      )
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        ),
+                      if (number % 2 == 1)
+                        Row(
+                          children: [
+                            Container(
+                              height: 217,
+                              width: 160,
+                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              child: ElevatedButton(
+                                  onPressed: () => {},
+                                  style: ElevatedButton.styleFrom(
+                                    padding: EdgeInsets.zero,
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 124,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/Food/"+jsonData[number-1]['image']+".png"),
+                                                fit: BoxFit.cover)),
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 10,right: 10,top: 5),
+                                        child: Text(
+                                          jsonData[number-1]["Name"],
+                                          style: const TextStyle(
+                                              fontFamily: "Poppins",
+                                              fontSize: 13,
+                                              color: Color.fromRGBO(
+                                                  138, 138, 138, 1)),
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          SizedBox(width: 10,),
+                                          Text(
+                                            jsonData[number-1]["Calories"]+"Cal",
+                                            style: const TextStyle(
+                                                color: Color.fromRGBO(
+                                                    0, 130, 5, 1),
+                                                fontSize: 13),
+                                          ),
+                                          const SizedBox(
+                                            width: 60,
+                                          ),
+                                          const Icon(
+                                            Icons.bakery_dining_rounded,
+                                            size: 25,
+                                            color: Colors.red,
+                                          ),
+                                          SizedBox(width: 10,)
+                                        ],
+                                      )
+                                    ],
+                                  )),
+                            ),
+                          ],
+                        )
+                    ],
+                  );
+                }
+              }),
         ],
       ),
     );
   }
 
-  Future jsonLength() async {
+  Future<List<dynamic>> jsonLength() async {
     String jsonString = await rootBundle.loadString('assets/Recipes.json');
-    setState(() {
-      jsonData = json.decode(jsonString);
-      number = jsonData.length;
-    });
+    jsonData = json.decode(jsonString);
+    number = jsonData.length;
+    return jsonData;
   }
 }
