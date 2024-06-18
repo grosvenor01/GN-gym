@@ -97,7 +97,7 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet  consectetur ",
+                        "Here we are displaying you daily water drink you genrally need 2L per day",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,
@@ -168,7 +168,7 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet  consectetur ",
+                        "Your workout percentage is calculated here, Hard look you should achieve the 100% ",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,
@@ -264,7 +264,7 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet  consectetur ",
+                        "Your daily meals are calculated here to make you more in touch with your day ",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,
@@ -335,7 +335,7 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet  consectetur ",
+                        "Try our meals recommandation  for better carbs and healthy meals , or just just buy it ",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,

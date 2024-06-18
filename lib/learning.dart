@@ -74,9 +74,7 @@ class _LearningState extends State<Learning> {
                                   onPressed: () => {
                                         Navigator.push(
                                             context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    Reciepe()))
+                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[i]["Name"])))
                                       },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
@@ -137,7 +135,11 @@ class _LearningState extends State<Learning> {
                               width: 160,
                               margin: const EdgeInsets.only(left: 26, top: 26),
                               child: ElevatedButton(
-                                  onPressed: () => {},
+                                  onPressed: () => {
+                                    Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[i+1]["Name"])))
+                                      },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
                                     padding: EdgeInsets.zero,
@@ -207,7 +209,11 @@ class _LearningState extends State<Learning> {
                               width: 160,
                               margin: const EdgeInsets.only(left: 26, top: 26),
                               child: ElevatedButton(
-                                  onPressed: () => {},
+                                  onPressed: () => {
+                                    Navigator.push(
+                                            context,
+                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[number-1]["Name"])))
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     padding: EdgeInsets.zero,
                                     backgroundColor: Colors.white,

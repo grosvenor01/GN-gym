@@ -1,5 +1,6 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import 'package:flutter_animate/flutter_animate.dart';
 
 class food extends StatefulWidget {
   const food({super.key});
@@ -65,32 +66,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Completed",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Completed",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
           SizedBox(height: 26),
           const Padding(
             padding: EdgeInsets.only(left: 26),
@@ -100,33 +99,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Perfect",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Perfect",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
-
           SizedBox(height: 26),
           const Padding(
             padding: EdgeInsets.only(left: 26),
@@ -136,33 +132,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Perfect",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Perfect",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
-
           SizedBox(height: 26),
           const Padding(
             padding: EdgeInsets.only(left: 26),
@@ -172,32 +165,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Unhealthy",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Unhealthy",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
           SizedBox(height: 26),
           const Padding(
             padding: EdgeInsets.only(left: 26),
@@ -207,32 +198,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Too Hight",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Too Hight",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
           SizedBox(height: 26),
           const Padding(
             padding: EdgeInsets.only(left: 26),
@@ -242,32 +231,30 @@ class _foodState extends State<food> {
                   fontFamily: "Poppins", fontSize: 13, color: Colors.white),
             ),
           ),
-
-
           const Padding(
             padding: EdgeInsets.only(left: 26, right: 26, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-
-                  LinearProgressIndicator(
-                    backgroundColor: Color.fromRGBO(138, 138, 138, 50),
-                    color: Color.fromRGBO(244, 206, 20, 1),
-                    value: 0.8,
-                    minHeight: 10,
+                LinearProgressIndicator(
+                  backgroundColor: Color.fromRGBO(138, 138, 138, 50),
+                  color: Color.fromRGBO(244, 206, 20, 1),
+                  value: 0.8,
+                  minHeight: 10,
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "Greate",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Color.fromRGBO(138, 138, 138, 1),
                   ),
-                  SizedBox(height: 5,),
-                  Text(
-                    "Greate",
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromRGBO(138, 138, 138, 1),
-                    ),
-                  ),
+                ),
               ],
             ),
           ),
-
         ],
       ),
     );

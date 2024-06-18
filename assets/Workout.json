@@ -7,32 +7,32 @@
                 "Exercises": [
                     {
                         "Name": "Barbell Bench Press",
-                        "Sets": 4,
-                        "Reps": 8,
+                        "Sets":  "4",
+                        "Reps": "8",
                         "Rest": "00:02:00"
                     },
                     {
                         "Name": "Incline Barbell Bench Press",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Dumbbell Flyes",
-                        "Sets": 3,
-                        "Reps": 10,
+                        "Sets":  "3",
+                        "Reps": "10",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Triceps Pushdowns",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Skull Crushers",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     }
                 ]
@@ -42,32 +42,32 @@
                 "Exercises": [
                     {
                         "Name": "Deadlifts",
-                        "Sets": 4,
-                        "Reps": 5,
+                        "Sets":  "4",
+                        "Reps": "5",
                         "Rest": "00:02:30"
                     },
                     {
                         "Name": "Barbell Rows",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:02:00"
                     },
                     {
                         "Name": "Pull-ups",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Barbell Curls",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Hammer Curls",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:01:30"
                     }
                 ]
@@ -77,26 +77,26 @@
                 "Exercises": [
                     {
                         "Name": "Barbell Back Squats",
-                        "Sets": 4,
-                        "Reps": 6,
+                        "Sets":  "4",
+                        "Reps": "6",
                         "Rest": "00:02:30"
                     },
                     {
                         "Name": "Leg Press",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:02:00"
                     },
                     {
                         "Name": "Romanian Deadlifts",
-                        "Sets": 3,
-                        "Reps": 8,
+                        "Sets":  "3",
+                        "Reps": "8",
                         "Rest": "00:02:00"
                     },
                     {
                         "Name": "Standing Calf Raises",
-                        "Sets": 3,
-                        "Reps": 10,
+                        "Sets":  "3",
+                        "Reps": "10",
                         "Rest": "00:01:30"
                     }
                 ]
@@ -106,26 +106,26 @@
                 "Exercises": [
                     {
                         "Name": "Barbell Overhead Press",
-                        "Sets": 4,
-                        "Reps": 6,
+                        "Sets":  "4",
+                        "Reps": "6",
                         "Rest": "00:02:00"
                     },
                     {
                         "Name": "Dumbbell Lateral Raises",
-                        "Sets": 3,
-                        "Reps": 10,
+                        "Sets":  "3",
+                        "Reps": "10",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Face Pulls",
-                        "Sets": 3,
-                        "Reps": 10,
+                        "Sets":  "3",
+                        "Reps": "10",
                         "Rest": "00:01:30"
                     },
                     {
                         "Name": "Dumbbell Shrugs",
-                        "Sets": 3,
-                        "Reps": 10,
+                        "Sets":  "3",
+                        "Reps": "10",
                         "Rest": "00:01:30"
                     }
                 ]
@@ -145,20 +145,20 @@
               },
               {
                 "Name": "Plank",
-                "Sets": 3,
+                "Sets":  "3",
                 "Time": "00:01:00",
                 "Rest": "00:00:30"
               },
               {
                 "Name": "Ab Wheel Rollouts",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Lying Leg Raises",
-                "Sets": 3,
-                "Reps": 12,
+                "Sets":  "3",
+                "Reps": "12",
                 "Rest": "00:01:00"
               }
             ]
@@ -168,26 +168,26 @@
             "Exercises": [
               {
                 "Name": "Push-ups",
-                "Sets": 3,
-                "Reps": 12,
+                "Sets":  "3",
+                "Reps": "12",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Bent-Over Dumbbell Rows",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Shoulder Raises",
-                "Sets": 3,
-                "Reps": 15,
+                "Sets":  "3",
+                "Reps": "15",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Triceps Dips",
-                "Sets": 3,
-                "Reps": 12,
+                "Sets":  "3",
+                "Reps": "12",
                 "Rest": "00:01:00"
               }
             ]
@@ -197,26 +197,26 @@
             "Exercises": [
               {
                 "Name": "Bodyweight Squats",
-                "Sets": 3,
-                "Reps": 15,
+                "Sets":  "3",
+                "Reps": "15",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Lunges",
-                "Sets": 3,
-                "Reps": 10 ,
+                "Sets":  "3",
+                "Reps": "10" ,
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Calf Raises",
-                "Sets": 3, 
-                "Reps": 15,
+                "Sets":  "3", 
+                "Reps": "15",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Glute Bridges",
-                "Sets": 3,
-                "Reps": 12,
+                "Sets":  "3",
+                "Reps": "12",
                 "Rest": "00:01:00"
               }
             ]
@@ -236,14 +236,14 @@
               },
               {
                 "Name": "Walking Lunges",
-                "Sets": 2,
-                "Reps": 20 ,
+                "Sets":  "2",
+                "Reps": "20" ,
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Jump Squats",
-                "Sets": 2,
-                "Reps": 15,
+                "Sets":  "2",
+                "Reps": "15",
                 "Rest": "00:01:30"
               }
             ]
@@ -253,26 +253,26 @@
             "Exercises": [
               {
                 "Name": "Kettlebell Swings",
-                "Sets": 3,
-                "Reps": 20,
+                "Sets":  "3",
+                "Reps": "20",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Pull-ups",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "8-10",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Burpees",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Dumbbell Step-ups",
-                "Sets": 3,
-                "Reps": 12,
+                "Sets":  "3",
+                "Reps": "12",
                 "Rest": "00:01:00"
               }
             ]
@@ -287,14 +287,14 @@
               },
               {
                 "Name": "Mountain Climbers",
-                "Sets": 3,
+                "Sets":  "3",
                 "Time": "00:00:45",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Box Jumps",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:00"
               },
               {
@@ -314,25 +314,25 @@
             "Exercises": [
               {
                 "Name": "Barbell Bench Press",
-                "Sets": 4,
+                "Sets":  "4",
                 "Reps": "8-10",
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Incline Dumbbell Press",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Triceps Pushdowns",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "12-15",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Triceps Dips",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               }
@@ -343,25 +343,25 @@
             "Exercises": [
               {
                 "Name": "Barbell Rows",
-                "Sets": 4,
+                "Sets":  "4",
                 "Reps": "8-10",
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Lat Pulldowns",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Barbell Curls",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "12-15",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Hammer Curls",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               }
@@ -372,25 +372,25 @@
             "Exercises": [
               {
                 "Name": "Barbell Back Squats",
-                "Sets": 4,
+                "Sets":  "4",
                 "Reps": "8-10",
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Romanian Deadlifts",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Overhead Press",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "8-10",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Lateral Raises",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "12-15",
                 "Rest": "00:01:30"
               }
@@ -411,19 +411,19 @@
               },
               {
                 "Name": "Kettlebell Swings",
-                "Sets": 3,
-                "Reps": 15,
+                "Sets":  "3",
+                "Reps": "15",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Box Jumps",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:00"
               },
               {
                 "Name": "Mountain Climbers",
-                "Sets": 3,
+                "Sets":  "3",
                 "Time": "00:00:45",
                 "Rest": "00:01:00"
               }
@@ -439,14 +439,14 @@
               },
               {
                 "Name": "Walking Lunges",
-                "Sets": 2,
-                "Reps": 20 ,
+                "Sets":  "2",
+                "Reps": "20" ,
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Burpees",
-                "Sets": 2,
-                "Reps": 12,
+                "Sets":  "2",
+                "Reps": "12",
                 "Rest": "00:01:30"
               }
             ]
@@ -456,7 +456,7 @@
             "Exercises": [
               {
                 "Name": "Barbell Back Squats",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:02:00"
               },
@@ -467,7 +467,7 @@
               },
               {
                 "Name": "Push-ups",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "12-15",
                 "Rest": "00:01:30"
               },
@@ -488,19 +488,19 @@
             "Exercises": [
               {
                 "Name": "Barbell Back Squats",
-                "Sets": 4,
+                "Sets":  "4",
                 "Reps": "6-8",
                 "Rest": "00:02:30"
               },
               {
                 "Name": "Deadlifts",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "5-7",
                 "Rest": "00:03:00"
               },
               {
                 "Name": "Bent-Over Barbell Rows", 
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "8-10",
                 "Rest": "00:02:00"
               },
@@ -516,8 +516,8 @@
             "Exercises": [
               {
                 "Name": "Burpee Broad Jumps",
-                "Sets": 3,
-                "Reps": 10,
+                "Sets":  "3",
+                "Reps": "10",
                 "Rest": "00:01:30"
               },
               {
@@ -527,8 +527,8 @@
               },
               {
                 "Name": "Kettlebell Swings",
-                "Sets": 4,
-                "Reps": 15,
+                "Sets":  "4",
+                "Reps": "15",
                 "Rest": "00:01:00"
               },
               {
@@ -543,19 +543,19 @@
             "Exercises": [
               {
                 "Name": "Barbell Bench Press",
-                "Sets": 4,
+                "Sets":  "4",
                 "Reps": "8-10",
                 "Rest": "00:02:00"
               },
               {
                 "Name": "Incline Dumbbell Press",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               },
               {
                 "Name": "Barbell Bicep Curls",
-                "Sets": 3,
+                "Sets":  "3",
                 "Reps": "10-12",
                 "Rest": "00:01:30"
               },
