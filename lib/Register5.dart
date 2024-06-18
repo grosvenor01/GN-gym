@@ -4,6 +4,7 @@ import 'package:gym_app/Register.dart';
 import 'package:gym_app/Register3.dart';
 import 'package:gym_app/Register4.dart';
 import 'package:gym_app/Register6.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Register5 extends StatefulWidget {
   const Register5({super.key});
@@ -13,7 +14,18 @@ class Register5 extends StatefulWidget {
 }
 
 class _Register5State extends State<Register5> {
- List<bool?> _ischecked = [false, false, false, false, false,false , false , false];
+  var goal;
+  var goal2;
+  List<bool?> _ischecked = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -62,12 +74,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[1],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[1] =  value != false;
+                              _ischecked[1] = value != false;
+                              goal = "Gain Weight";
+                              goal2 = "gain weight";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
               Container(
                   height: 57,
@@ -86,12 +99,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[2],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[2] =  value != false;
+                              _ischecked[2] = value != false;
+                              goal = "Improve Endurance";
+                              goal2 = "improve endurance";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
               Container(
                   height: 57,
@@ -110,12 +124,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[3],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[3] =  value != false;
+                              _ischecked[3] = value != false;
+                              goal = "Lose Weight";
+                              goal2 = "lose weight";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
               Container(
                   height: 57,
@@ -134,12 +149,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[4],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[4] =  value != false;
+                              _ischecked[4] = value != false;
+                              goal = "Gain Weight";
+                              goal2 = "gain weight";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
               Container(
                   height: 57,
@@ -158,12 +174,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[5],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[5] =  value != false;
+                              _ischecked[5] = value != false;
+                              goal = "Gain Weight";
+                              goal2 = "gain weight";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
               Container(
                   height: 57,
@@ -182,12 +199,13 @@ class _Register5State extends State<Register5> {
                             )),
                         value: _ischecked[0],
                         onChanged: ((bool? value) => setState(() {
-                              _ischecked[0] =  value != false;
+                              _ischecked[0] = value != false;
+                              goal = "Gain Weight";
+                              goal2 = "gain weight";
                             })),
                         activeColor: Color.fromRGBO(244, 206, 20, 1),
                         checkColor: Colors.black,
-                      ))
-                ),
+                      ))),
               SizedBox(height: 10),
             ])),
         Row(
@@ -225,7 +243,7 @@ class _Register5State extends State<Register5> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Register6()))
+                          builder: (context) => Register6()))
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(244, 206, 20, 1),
@@ -242,5 +260,10 @@ class _Register5State extends State<Register5> {
         )
       ],
     );
+  }
+  Future<void> setCookie() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('value1',goal);
+    await prefs.setString('value2',goal2);
   }
 }

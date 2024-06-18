@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
+import "package:gym_app/nav.dart";
 import "dart:async";
+import 'package:shared_preferences/shared_preferences.dart';
 
 import "package:gym_app/about.dart";
 
@@ -19,11 +21,21 @@ class _LandingState extends State<Landing> {
   void _navigateToNextPage() {
     Timer(
       const Duration(seconds: 5),
-      () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const about()),
-        );
+      () async{
+        final prefs = await SharedPreferences.getInstance();
+        bool state = prefs.getBool('has_completed_registration') ?? false;
+        if(state){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const about()),
+          );
+        }else{
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => nav()),
+          );
+        }
+        
       },
     );
   }
@@ -58,4 +70,8 @@ class _LandingState extends State<Landing> {
       ),
     );
   }
+  Future<bool> hasCompletedRegistration() async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getBool('has_completed_registration') ?? false;
+}
 }

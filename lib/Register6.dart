@@ -53,39 +53,17 @@ class _Register6State extends State<Register6> {
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () => {
-                      setState(() => slectedIndex = 1)
-                    },
+                    onPressed: () => {setState(() => slectedIndex = 1)},
                     style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                      backgroundColor: slectedIndex == 1 ? color1 : color2
-                    ),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        backgroundColor: slectedIndex == 1 ? color1 : color2),
                     child: Text("Beginner",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 20,
-                            color: slectedIndex == 1 ? Colors.black : Colors.white,
-                            decoration: TextDecoration.none)),
-                  )
-                ),
-              SizedBox(height: 10),
-              Container(
-                  height: 57,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  child: ElevatedButton(
-                    onPressed: () => {
-                      setState(() => slectedIndex = 2)
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      backgroundColor: slectedIndex==2 ? color1 : color2,
-                    ),
-                    child: Text("Medium",
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 20,
-                            color: slectedIndex==2 ? Colors.black : Colors.white,
+                            color:
+                                slectedIndex == 1 ? Colors.black : Colors.white,
                             decoration: TextDecoration.none)),
                   )),
               SizedBox(height: 10),
@@ -93,22 +71,39 @@ class _Register6State extends State<Register6> {
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () => {
-                      setState(() => slectedIndex = 3)
-                    },
+                    onPressed: () => {setState(() => slectedIndex = 2)},
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
-                      backgroundColor: slectedIndex==3 ? color1 : color2,
+                      backgroundColor: slectedIndex == 2 ? color1 : color2,
+                    ),
+                    child: Text("Medium",
+                        style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 20,
+                            color:
+                                slectedIndex == 2 ? Colors.black : Colors.white,
+                            decoration: TextDecoration.none)),
+                  )),
+              SizedBox(height: 10),
+              Container(
+                  height: 57,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: ElevatedButton(
+                    onPressed: () => {setState(() => slectedIndex = 3)},
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      backgroundColor: slectedIndex == 3 ? color1 : color2,
                     ),
                     child: Text("Advanced",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 20,
-                            color: slectedIndex==3 ? Colors.black : Colors.white,
+                            color:
+                                slectedIndex == 3 ? Colors.black : Colors.white,
                             decoration: TextDecoration.none)),
-                  )
-                ),
+                  )),
             ])),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -142,10 +137,8 @@ class _Register6State extends State<Register6> {
               width: 159,
               child: ElevatedButton(
                 onPressed: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Register7()))
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Register7()))
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromRGBO(244, 206, 20, 1),

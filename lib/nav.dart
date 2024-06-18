@@ -5,10 +5,10 @@ import "package:gym_app/food.dart";
 import "package:gym_app/learning.dart";
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class nav extends StatefulWidget {
-  const nav({super.key});
-
+  nav({super.key});
   @override
   State<nav> createState() => _navState();
 }
@@ -16,11 +16,19 @@ class nav extends StatefulWidget {
 class _navState extends State<nav> {
   int current = 0;
   var image;
-  var screens = [Routines(), food(), null, Workout(), Learning()];
   double iconSize = 24.0;
-
+  String? value1;
+  String? value2;
   @override
   Widget build(BuildContext context) {
+    setCookie();
+    var screens = [
+      Routines(),
+      food(),
+      null,
+      Workout(value1: value1.toString(), value2: value2.toString()),
+      Learning()
+    ];
     return Scaffold(
       body: screens[current],
       bottomNavigationBar: BottomNavigationBar(
@@ -115,5 +123,16 @@ class _navState extends State<nav> {
     setState(() {
       image = File(returnedpic.path);
     });
+  }
+
+  Future<void> setCookie() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('has_completed_registration', true);
+  }
+
+  Future<void> getCookie() async {
+    final prefs = await SharedPreferences.getInstance();
+    value1 = await prefs.getString("value1");
+    value2 = await prefs.getString("value2");
   }
 }

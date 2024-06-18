@@ -57,18 +57,19 @@ class _RoutinesState extends State<Routines> {
           ),
           SizedBox(height: 26),
           Row(
+
             children: [
               const SizedBox(
                 width: 26,
               ),
               Container(
-                height: 193,
+                height: 220,
                 width: 166,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Color.fromRGBO(38, 38, 38, 1)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
@@ -133,13 +134,13 @@ class _RoutinesState extends State<Routines> {
               ),
               SizedBox(width: 10,),
               Container(
-                height: 193,
+                height: 220,
                 width: 166,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Color.fromRGBO(38, 38, 38, 1)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
@@ -229,13 +230,13 @@ class _RoutinesState extends State<Routines> {
                 width: 26,
               ),
               Container(
-                height: 193,
+                height: 220,
                 width: 166,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Color.fromRGBO(38, 38, 38, 1)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
@@ -300,13 +301,13 @@ class _RoutinesState extends State<Routines> {
               ),
               SizedBox(width: 10,),
               Container(
-                height: 193,
+                height: 220,
                 width: 166,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: Color.fromRGBO(38, 38, 38, 1)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(

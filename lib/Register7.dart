@@ -15,7 +15,6 @@ import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class Register7 extends StatefulWidget {
   const Register7({super.key});
-
   @override
   State<Register7> createState() => _Register7State();
 }
@@ -95,6 +94,9 @@ class _Register7State extends State<Register7> {
                     child:const Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
 
@@ -119,9 +121,11 @@ class _Register7State extends State<Register7> {
                     child:const Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
-
                           hintText: "Email",
                           hintStyle: TextStyle(
                             fontFamily: "Poppins",
@@ -143,6 +147,9 @@ class _Register7State extends State<Register7> {
                     child:const Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
 
@@ -166,6 +173,9 @@ class _Register7State extends State<Register7> {
                     ),
                     child: InternationalPhoneNumberInput(
                       onInputChanged: (value) => print(value),
+                      textStyle: TextStyle(
+                        color: Colors.white
+                      ),
                       selectorTextStyle: const TextStyle(
                         fontFamily: "Poppins",
                         fontSize: 15,
@@ -204,7 +214,7 @@ class _Register7State extends State<Register7> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Register6()))
+                              builder: (context) => Register6()))
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(82, 81, 76, 1),
@@ -228,7 +238,7 @@ class _Register7State extends State<Register7> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const nav()))
+                              builder: (context) => nav()))
                     },
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(244, 206, 20, 1),

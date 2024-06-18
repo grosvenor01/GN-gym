@@ -3,17 +3,20 @@ import "package:flutter/services.dart";
 import 'dart:convert';
 
 class Workout extends StatefulWidget {
-  const Workout({super.key});
+  final String value1;
+  final String value2;
+  Workout({
+    Key? key,
+    required this.value1,
+    required this.value2
+  }): super(key:key);
+
   @override
   State<Workout> createState() => _WorkoutState();
 }
 
 class _WorkoutState extends State<Workout> {
   @override
-  double water_progress = 20;
-  double workout_progress = 20;
-  final goal = "Gain Weight";
-  final goal2 = "gain weight";
   final day = DateTime.now().weekday;
   var selection;
   int number = 0;
@@ -26,6 +29,8 @@ class _WorkoutState extends State<Workout> {
 
   @override
   Widget build(BuildContext context) {
+    final goal = widget.value1;
+    final goal2 = widget.value2;
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -66,8 +71,11 @@ class _WorkoutState extends State<Workout> {
                 selection = 2;
                 break;
               case 7:
-                selection = 3;
-                break;
+                if(goal == "Gain Weight"){
+                  selection = 3;
+                  break;
+                }
+                
               case 2:
               case 4:
               case 6:
@@ -145,7 +153,11 @@ class _WorkoutState extends State<Workout> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/Workout/$goal2/day1_${i + 1}.png"),
+                                          "assets/Workout/$goal2/day${selection+1}_${i + 1}.png"),
+                                      onError: (exception, stackTrace) {
+                                        image:
+                                        const AssetImage("assets/icon.png");
+                                      },
                                       fit: BoxFit.cover,
                                     ),
                                     border: Border.all(color: Colors.white),
