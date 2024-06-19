@@ -1,6 +1,7 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import 'package:flutter_animate/flutter_animate.dart';
+import "package:gym_app/account.dart";
 
 class food extends StatefulWidget {
   const food({super.key});
@@ -25,12 +26,24 @@ class _foodState extends State<food> {
           style: TextStyle(
               fontFamily: "Poppins", fontSize: 20, color: Colors.white),
         ),
-        actions: const [
-          Icon(
-            Icons.more_horiz,
-            size: 21,
-            color: Colors.white,
+        actions: [
+          ElevatedButton(
+            onPressed: ()=>{
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context)=> account())
+              )
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent
+            ),
+            child: const Icon(
+              Icons.more_horiz,
+              size: 21,
+              color: Colors.white,
+            ),
           ),
+          
           SizedBox(
             width: 10,
           )

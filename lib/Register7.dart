@@ -1,17 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:gym_app/Register.dart';
-import 'package:gym_app/Register3.dart';
 import 'package:gym_app/Register6.dart';
-import 'package:gym_app/Routines.dart';
-import 'package:gym_app/Workout.dart';
-import 'package:gym_app/food.dart';
-import 'package:gym_app/learning.dart';
 import 'package:gym_app/nav.dart';
 import 'dart:io'; // FOR ACCESSING AND FILE MANIPULATION
 import 'package:image_picker/image_picker.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart'; 
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Register7 extends StatefulWidget {
   const Register7({super.key});
@@ -91,15 +84,17 @@ class _Register7State extends State<Register7> {
                       color: Color.fromRGBO(30, 30, 30, 1),
                       borderRadius: BorderRadius.circular(15)
                     ),
-                    child:const Padding(
+                    child:Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white
                         ),
-                        decoration: InputDecoration(
+                        onChanged: (value) => {
+                          setCookie("full_name",value)
+                        },
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
-
                           hintText: "Full Name",
                           hintStyle: TextStyle(
                             fontFamily: "Poppins",
@@ -118,13 +113,16 @@ class _Register7State extends State<Register7> {
                       color: Color.fromRGBO(30, 30, 30, 1),
                       borderRadius: BorderRadius.circular(15)
                     ),
-                    child:const Padding(
+                    child:Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white
                         ),
-                        decoration: InputDecoration(
+                         onChanged: (value) => {
+                          setCookie("Email",value)
+                        },
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: "Email",
                           hintStyle: TextStyle(
@@ -147,9 +145,10 @@ class _Register7State extends State<Register7> {
                     child:const Padding(
                       padding: EdgeInsets.only(left: 10 , top: 5),
                       child : TextField(
-                        style: TextStyle(
+                        style:TextStyle(
                           color: Colors.white
                         ),
+                         
                         decoration: InputDecoration(
                           border: InputBorder.none,
 
@@ -255,6 +254,12 @@ class _Register7State extends State<Register7> {
             )
           ],
         ));
+  }
+
+  Future<void> setCookie(String attribute , String value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(attribute, value);
+    print(prefs.getString(attribute));
   }
 
   Future pick_image_gallery() async {

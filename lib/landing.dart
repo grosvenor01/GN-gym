@@ -18,27 +18,29 @@ class _LandingState extends State<Landing> {
     super.initState();
     _navigateToNextPage();
   }
+
   void _navigateToNextPage() {
     Timer(
-      const Duration(seconds: 5),
-      () async{
+      const Duration(seconds: 3),
+      () async {
         final prefs = await SharedPreferences.getInstance();
         bool state = prefs.getBool('has_completed_registration') ?? false;
-        if(state){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const about()),
-          );
-        }else{
+        print(state);
+        if (state) {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => nav()),
           );
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => about()),
+          );
         }
-        
       },
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,8 +72,9 @@ class _LandingState extends State<Landing> {
       ),
     );
   }
+
   Future<bool> hasCompletedRegistration() async {
-  final prefs = await SharedPreferences.getInstance();
-  return prefs.getBool('has_completed_registration') ?? false;
-}
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool('has_completed_registration') ?? false;
+  }
 }

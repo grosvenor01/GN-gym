@@ -6,6 +6,7 @@ import 'package:gym_app/Register4.dart';
 import 'package:gym_app/Register5.dart';
 import 'package:gym_app/Register6.dart';
 import 'package:gym_app/Register7.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Register6 extends StatefulWidget {
   const Register6({super.key});
@@ -18,6 +19,7 @@ class _Register6State extends State<Register6> {
   int slectedIndex = 2;
   var color1 = Color.fromRGBO(244, 206, 20, 1);
   var color2 = Color.fromRGBO(30, 30, 30, 1);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -53,7 +55,7 @@ class _Register6State extends State<Register6> {
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () => {setState(() => slectedIndex = 1)},
+                    onPressed: () => {setState(() => slectedIndex = 1),setCookie(slectedIndex)},
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
@@ -71,7 +73,7 @@ class _Register6State extends State<Register6> {
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () => {setState(() => slectedIndex = 2)},
+                    onPressed: () => {setState(() => slectedIndex = 2,),setCookie(slectedIndex)},
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
@@ -90,7 +92,8 @@ class _Register6State extends State<Register6> {
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: ElevatedButton(
-                    onPressed: () => {setState(() => slectedIndex = 3)},
+                    onPressed: () =>
+                        {setState(() => slectedIndex = 3), setCookie(slectedIndex)},
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
@@ -155,5 +158,10 @@ class _Register6State extends State<Register6> {
         )
       ],
     );
+  }
+  Future<void> setCookie(int selectedIndex) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("activity", "$selectedIndex");
+    print(prefs.getString("activity"));
   }
 }

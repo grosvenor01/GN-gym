@@ -17,18 +17,10 @@ class _navState extends State<nav> {
   int current = 0;
   var image;
   double iconSize = 24.0;
-  String? value1;
-  String? value2;
   @override
   Widget build(BuildContext context) {
     setCookie();
-    var screens = [
-      Routines(),
-      food(),
-      null,
-      Workout(value1: value1.toString(), value2: value2.toString()),
-      Learning()
-    ];
+    var screens = [Routines(), food(), null, Workout(), Learning()];
     return Scaffold(
       body: screens[current],
       bottomNavigationBar: BottomNavigationBar(
@@ -128,11 +120,6 @@ class _navState extends State<nav> {
   Future<void> setCookie() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('has_completed_registration', true);
-  }
-
-  Future<void> getCookie() async {
-    final prefs = await SharedPreferences.getInstance();
-    value1 = await prefs.getString("value1");
-    value2 = await prefs.getString("value2");
+    print(prefs.getBool('has_completed_registration'));
   }
 }

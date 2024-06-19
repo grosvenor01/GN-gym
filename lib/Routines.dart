@@ -1,5 +1,6 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:gym_app/account.dart";
 
 class Routines extends StatefulWidget {
   const Routines({super.key});
@@ -24,13 +25,24 @@ class _RoutinesState extends State<Routines> {
           style: TextStyle(
               fontFamily: "Poppins", fontSize: 20, color: Colors.white),
         ),
-        actions: const [
-          Icon(
-            Icons.more_horiz,
-            size: 21,
-            color: Colors.white,
-            
+        actions: [
+          ElevatedButton(
+            onPressed: ()=>{
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context)=> account())
+              )
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent
+            ),
+            child: const Icon(
+              Icons.more_horiz,
+              size: 21,
+              color: Colors.white,
+            ),
           ),
+          
           SizedBox(
             width: 10,
           )

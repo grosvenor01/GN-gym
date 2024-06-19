@@ -1,15 +1,11 @@
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
+import 'package:gym_app/account.dart';
 import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Workout extends StatefulWidget {
-  final String value1;
-  final String value2;
-  Workout({
-    Key? key,
-    required this.value1,
-    required this.value2
-  }): super(key:key);
+  Workout({super.key});
 
   @override
   State<Workout> createState() => _WorkoutState();
@@ -25,12 +21,17 @@ class _WorkoutState extends State<Workout> {
   void initState() {
     super.initState();
     _ischecked = List.generate(8, (_) => false);
+    getCookie();
   }
+
+  String? goal = "";
+  String? goal2 = "";
 
   @override
   Widget build(BuildContext context) {
-    final goal = widget.value1;
-    final goal2 = widget.value2;
+    print(goal.toString());
+    print(goal2.toString());
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -41,12 +42,24 @@ class _WorkoutState extends State<Workout> {
           style: TextStyle(
               fontFamily: "Poppins", fontSize: 20, color: Colors.white),
         ),
-        actions: const [
-          Icon(
-            Icons.more_horiz,
-            size: 21,
-            color: Colors.white,
+        actions: [
+          ElevatedButton(
+            onPressed: ()=>{
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context)=> account())
+              )
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent
+            ),
+            child: const Icon(
+              Icons.more_horiz,
+              size: 21,
+              color: Colors.white,
+            ),
           ),
+          
           SizedBox(
             width: 10,
           )
@@ -71,11 +84,11 @@ class _WorkoutState extends State<Workout> {
                 selection = 2;
                 break;
               case 7:
-                if(goal == "Gain Weight"){
+                if (goal == "Gain Weight") {
                   selection = 3;
                   break;
                 }
-                
+
               case 2:
               case 4:
               case 6:
@@ -153,7 +166,7 @@ class _WorkoutState extends State<Workout> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
-                                          "assets/Workout/$goal2/day${selection+1}_${i + 1}.png"),
+                                          "assets/Workout/$goal2/day${selection + 1}_${i + 1}.png"),
                                       onError: (exception, stackTrace) {
                                         image:
                                         const AssetImage("assets/icon.png");
@@ -237,6 +250,13 @@ class _WorkoutState extends State<Workout> {
         },
       ),
     );
+  }
+
+  Future<void> getCookie() async {
+    final prefs = await SharedPreferences.getInstance();
+    goal = prefs.getString("value1");
+    goal2 = prefs.getString("value2");
+    setState(() {});
   }
 
   Future<List<dynamic>> Get_json_Workout() async {

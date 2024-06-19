@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
-import "package:flutter/widgets.dart";
 import 'dart:convert';
+
+import "package:gym_app/account.dart";
 
 class Reciepe extends StatelessWidget {
   final String value;
@@ -47,11 +48,19 @@ class Reciepe extends StatelessWidget {
               appBar: AppBar(
                 backgroundColor: Colors.black,
                 iconTheme: const IconThemeData(color: Colors.white),
-                actions: const [
-                  Icon(
-                    Icons.more_horiz,
-                    size: 21,
-                    color: Colors.white,
+                actions: [
+                  ElevatedButton(
+                    onPressed: () => {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => account()))
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent),
+                    child: const Icon(
+                      Icons.more_horiz,
+                      size: 21,
+                      color: Colors.white,
+                    ),
                   ),
                   SizedBox(
                     width: 10,
@@ -64,10 +73,10 @@ class Reciepe extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.3,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/Food/"+data.first["image"]+".png"),
-                        fit: BoxFit.cover)
-                    ),
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/Food/" + data.first["image"] + ".png"),
+                            fit: BoxFit.cover)),
                   ),
 
                   Positioned(
@@ -79,7 +88,6 @@ class Reciepe extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.white),
                       child: ListView(
-                        
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20, top: 20),
@@ -90,37 +98,33 @@ class Reciepe extends StatelessWidget {
                                     color: Colors.black)),
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                            
-                            const Icon(Icons.alarm,color: Colors.red, size: 40),
-
-                            Text(data.first["Time"],
-                                style: const TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 15,
-                                    color: Colors.black)),
-                            
-                            const Icon(Icons.local_fire_department_sharp,
-                                color: Colors.orange, size: 40),
-                            Text(data.first["Calories"] + " cal",
-                                style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 15,
-                                    color: Colors.black)),
-                            
-                            const Icon(
-                              Icons.star,
-                              color: Colors.yellow,
-                              size: 40,
-                            ),
-                            Text("${data.first["Rate"]}",
-                                style: const TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 15,
-                                    color: Colors.black)),
-                            
-                          ]),
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                const Icon(Icons.alarm,
+                                    color: Colors.red, size: 40),
+                                Text(data.first["Time"],
+                                    style: const TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontSize: 15,
+                                        color: Colors.black)),
+                                const Icon(Icons.local_fire_department_sharp,
+                                    color: Colors.orange, size: 40),
+                                Text(data.first["Calories"] + " cal",
+                                    style: TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontSize: 15,
+                                        color: Colors.black)),
+                                const Icon(
+                                  Icons.star,
+                                  color: Colors.yellow,
+                                  size: 40,
+                                ),
+                                Text("${data.first["Rate"]}",
+                                    style: const TextStyle(
+                                        fontFamily: "Poppins",
+                                        fontSize: 15,
+                                        color: Colors.black)),
+                              ]),
                           Padding(
                             padding: EdgeInsets.only(left: 20, top: 20),
                             child: Text(
@@ -159,7 +163,6 @@ class Reciepe extends StatelessWidget {
                       height: MediaQuery.of(context)
                           .size
                           .height), // to make the positionned widget work correctly
-                  
                 ],
               ),
             );

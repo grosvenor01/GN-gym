@@ -1,6 +1,7 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
+import 'package:gym_app/account.dart';
 import "package:gym_app/reciepe.dart";
 import 'dart:convert';
 import 'dart:io';
@@ -28,12 +29,24 @@ class _LearningState extends State<Learning> {
           style: TextStyle(
               fontFamily: "Poppins", fontSize: 20, color: Colors.white),
         ),
-        actions: const [
-          Icon(
-            Icons.more_horiz,
-            size: 21,
-            color: Colors.white,
+        actions: [
+          ElevatedButton(
+            onPressed: ()=>{
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (context)=> account())
+              )
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent
+            ),
+            child: const Icon(
+              Icons.more_horiz,
+              size: 21,
+              color: Colors.white,
+            ),
           ),
+          
           SizedBox(
             width: 10,
           )

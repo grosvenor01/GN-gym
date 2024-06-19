@@ -14,8 +14,8 @@ class Register5 extends StatefulWidget {
 }
 
 class _Register5State extends State<Register5> {
-  var goal;
-  var goal2;
+  var goal="";
+  var goal2="";
   List<bool?> _ischecked = [
     false,
     false,
@@ -240,6 +240,7 @@ class _Register5State extends State<Register5> {
               width: 159,
               child: ElevatedButton(
                 onPressed: () => {
+                  setCookie(),
                   Navigator.push(
                       context,
                       MaterialPageRoute(
