@@ -19,6 +19,8 @@ class _LearningState extends State<Learning> {
   var jsonData = [];
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -31,22 +33,18 @@ class _LearningState extends State<Learning> {
         ),
         actions: [
           ElevatedButton(
-            onPressed: ()=>{
+            onPressed: () => {
               Navigator.push(
-                context, 
-                MaterialPageRoute(builder: (context)=> account())
-              )
+                  context, MaterialPageRoute(builder: (context) => account()))
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent
-            ),
+            style:
+                ElevatedButton.styleFrom(backgroundColor: Colors.transparent),
             child: const Icon(
               Icons.more_horiz,
               size: 21,
               color: Colors.white,
             ),
           ),
-          
           SizedBox(
             width: 10,
           )
@@ -58,7 +56,7 @@ class _LearningState extends State<Learning> {
             height: MediaQuery.of(context).size.height * 0.05,
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 26),
+            padding: EdgeInsets.only(left: 20),
             child: Text(
               "Popular Now",
               style: TextStyle(
@@ -76,18 +74,22 @@ class _LearningState extends State<Learning> {
                   final dady = snapshot.data!;
                   return Column(
                     children: [
-                      for (int i = 0; i < number-1 ; i=i+2)
+                      for (int i = 0; i < number - 1; i = i + 2)
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 217,
-                              width: 160,
-                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              height: screenHeight*0.32,
+                              width: screenWidth*0.42,
+                              margin: EdgeInsets.only(left: screenWidth*0.06, top: 26),
                               child: ElevatedButton(
                                   onPressed: () => {
                                         Navigator.push(
                                             context,
-                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[i]["Name"])))
+                                            MaterialPageRoute(
+                                                builder: (context) => Reciepe(
+                                                    value: jsonData[i]
+                                                        ["Name"])))
                                       },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
@@ -101,37 +103,45 @@ class _LearningState extends State<Learning> {
                                       Container(
                                         height: 124,
                                         decoration: BoxDecoration(
-                                            borderRadius:  BorderRadius.only(topLeft: Radius.circular(15),topRight:Radius.circular(15) ),
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                topRight: Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    "assets/Food/"+jsonData[i]['image']+".png"),
+                                                    "assets/Food/" +
+                                                        jsonData[i]['image'] +
+                                                        ".png"),
                                                 fit: BoxFit.cover)),
                                       ),
                                       const SizedBox(
                                         height: 5,
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(top: 5,right: 10,left: 10),
-                                        child : Text(
-                                        jsonData[i]["Name"],
-                                        style: const TextStyle(
-                                            fontFamily: "Poppins",
-                                            fontSize: 13,
-                                            color: Color.fromRGBO(
-                                                138, 138, 138, 1)),
+                                        padding: EdgeInsets.only(
+                                            top: 5, right: 10, left: 10),
+                                        child: Text(
+                                          jsonData[i]["Name"],
+                                          style: const TextStyle(
+                                              fontFamily: "Poppins",
+                                              fontSize: 13,
+                                              color: Color.fromRGBO(
+                                                  138, 138, 138, 1)),
+                                        ),
                                       ),
-                                      ),
+                                      Spacer(),
                                       Row(
                                         children: [
-                                          SizedBox(width: 10,),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
                                           Text(
-                                            dady[i]['Calories']+" Cal",
+                                            dady[i]['Calories'] + " Cal",
                                             style: const TextStyle(
                                                 color: Color.fromRGBO(
                                                     0, 130, 5, 1),
                                                 fontSize: 13),
                                           ),
-                                          const SizedBox(width: 60,),
+                                          Spacer(),
                                           const Icon(
                                             Icons.bakery_dining_rounded,
                                             size: 25,
@@ -139,19 +149,25 @@ class _LearningState extends State<Learning> {
                                           ),
                                           SizedBox(width: 10),
                                         ],
-                                      )
+                                      ),
+                                      SizedBox(height: 5,)
                                     ],
                                   )),
                             ),
+                            Spacer(),
                             Container(
-                              height: 217,
-                              width: 160,
-                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              height: screenHeight*0.32,
+                              width: screenWidth*0.42,
+                              margin:
+                                  EdgeInsets.only(right: screenWidth * 0.06, top: 26),
                               child: ElevatedButton(
                                   onPressed: () => {
-                                    Navigator.push(
+                                        Navigator.push(
                                             context,
-                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[i+1]["Name"])))
+                                            MaterialPageRoute(
+                                                builder: (context) => Reciepe(
+                                                    value: jsonData[i + 1]
+                                                        ["Name"])))
                                       },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.white,
@@ -162,24 +178,31 @@ class _LearningState extends State<Learning> {
                                   ),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         height: 124,
                                         decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight:Radius.circular(15) ),
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                topRight: Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    "assets/Food/"+jsonData[i+1]['image']+".png"),
+                                                    "assets/Food/" +
+                                                        jsonData[i + 1]
+                                                            ['image'] +
+                                                        ".png"),
                                                 fit: BoxFit.cover)),
                                       ),
                                       const SizedBox(
                                         height: 5,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 5,right: 10,left: 10),
+                                        padding: const EdgeInsets.only(
+                                            top: 5, right: 10, left: 10),
                                         child: Text(
-                                          jsonData[i+1]["Name"],
+                                          jsonData[i + 1]["Name"],
                                           style: const TextStyle(
                                               fontFamily: "Poppins",
                                               fontSize: 13,
@@ -187,28 +210,30 @@ class _LearningState extends State<Learning> {
                                                   138, 138, 138, 1)),
                                         ),
                                       ),
-                                      
+                                      Spacer(),
                                       Row(
                                         children: [
                                           SizedBox(width: 10),
                                           Text(
-                                            jsonData[i+1]["Calories"]+" Cal",
+                                            jsonData[i + 1]["Calories"] +
+                                                " Cal",
                                             style: const TextStyle(
                                                 color: Color.fromRGBO(
                                                     0, 130, 5, 1),
                                                 fontSize: 13),
                                           ),
-                                          const SizedBox(
-                                            width: 60,
-                                          ),
+                                          Spacer(),
                                           const Icon(
                                             Icons.bakery_dining_rounded,
                                             size: 25,
                                             color: Colors.red,
                                           ),
-                                          SizedBox(width: 10,)
+                                          SizedBox(
+                                            width: 10,
+                                          )
                                         ],
-                                      )
+                                      ),
+                                      SizedBox(height: 5,)
                                     ],
                                   )),
                             ),
@@ -218,15 +243,18 @@ class _LearningState extends State<Learning> {
                         Row(
                           children: [
                             Container(
-                              height: 217,
-                              width: 160,
-                              margin: const EdgeInsets.only(left: 26, top: 26),
+                              height: screenHeight*0.32,
+                              width: screenWidth*0.42,
+                              margin: EdgeInsets.only(left: screenWidth*0.06, top: 26),
                               child: ElevatedButton(
                                   onPressed: () => {
-                                    Navigator.push(
+                                        Navigator.push(
                                             context,
-                                            MaterialPageRoute(builder: (context) => Reciepe(value : jsonData[number-1]["Name"])))
-                                  },
+                                            MaterialPageRoute(
+                                                builder: (context) => Reciepe(
+                                                    value: jsonData[number - 1]
+                                                        ["Name"])))
+                                      },
                                   style: ElevatedButton.styleFrom(
                                     padding: EdgeInsets.zero,
                                     backgroundColor: Colors.white,
@@ -236,24 +264,31 @@ class _LearningState extends State<Learning> {
                                   ),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         height: 124,
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                topRight: Radius.circular(15)),
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    "assets/Food/"+jsonData[number-1]['image']+".png"),
+                                                    "assets/Food/" +
+                                                        jsonData[number - 1]
+                                                            ['image'] +
+                                                        ".png"),
                                                 fit: BoxFit.cover)),
                                       ),
                                       const SizedBox(
                                         height: 5,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(left: 10,right: 10,top: 5),
+                                        padding: const EdgeInsets.only(
+                                            left: 10, right: 10, top: 5),
                                         child: Text(
-                                          jsonData[number-1]["Name"],
+                                          jsonData[number - 1]["Name"],
                                           style: const TextStyle(
                                               fontFamily: "Poppins",
                                               fontSize: 13,
@@ -261,27 +296,32 @@ class _LearningState extends State<Learning> {
                                                   138, 138, 138, 1)),
                                         ),
                                       ),
+                                      Spacer(),
                                       Row(
                                         children: [
-                                          SizedBox(width: 10,),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
                                           Text(
-                                            jsonData[number-1]["Calories"]+"Cal",
+                                            jsonData[number - 1]["Calories"] +
+                                                "Cal",
                                             style: const TextStyle(
                                                 color: Color.fromRGBO(
                                                     0, 130, 5, 1),
                                                 fontSize: 13),
                                           ),
-                                          const SizedBox(
-                                            width: 60,
-                                          ),
+                                          Spacer(),
                                           const Icon(
                                             Icons.bakery_dining_rounded,
                                             size: 25,
                                             color: Colors.red,
                                           ),
-                                          SizedBox(width: 10,)
+                                          SizedBox(
+                                            width: 10,
+                                          )
                                         ],
-                                      )
+                                      ),
+                                      SizedBox(height: 5,)
                                     ],
                                   )),
                             ),
