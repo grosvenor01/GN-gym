@@ -22,7 +22,7 @@ class _Register3State extends State<Register3> {
         Container(
             height: MediaQuery.of(context).size.height * 0.9,
             child: Column(children: [
-          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           const Text(
             "What Is Your Weight",
             style: TextStyle(

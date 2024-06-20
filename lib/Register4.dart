@@ -21,7 +21,7 @@ class _Register4State extends State<Register4> {
             height: MediaQuery.of(context).size.height * 0.9,
             
             child: Column(children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               const Text(
                 "What Is Your Height",
                 style: TextStyle(

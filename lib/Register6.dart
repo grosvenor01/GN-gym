@@ -27,7 +27,7 @@ class _Register6State extends State<Register6> {
         Container(
             height: MediaQuery.of(context).size.height * 0.9,
             child: Column(children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               const Text(
                 "What Is Your Activity Level",
                 style: TextStyle(

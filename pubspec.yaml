@@ -22,7 +22,7 @@ dependencies:
   flutter_animate: ^4.5.0
   shared_preferences: ^2.2.3
   flutter_screenutil: ^5.9.3
-
+  device_preview: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

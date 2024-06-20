@@ -24,7 +24,7 @@ class _Register7State extends State<Register7> {
             Container(
                 height: MediaQuery.of(context).size.height * 0.9,
                 child: Column(children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                   const Text(
                     "Full Your Profile",
                     style: TextStyle(

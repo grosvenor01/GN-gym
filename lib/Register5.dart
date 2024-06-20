@@ -29,20 +29,21 @@ class _Register5State extends State<Register5> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
             height: MediaQuery.of(context).size.height * 0.9,
             child: Column(children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               const Text(
-                "What Is Your Goal",
-                style: TextStyle(
-                  decoration: TextDecoration.none,
-                  fontFamily: "Poppins",
-                  fontSize: 25,
-                  color: Colors.white,
+                  "What Is Your Goal",
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: "Poppins",
+                    fontSize: 25,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
               const Padding(
                 padding: EdgeInsets.only(left: 0),
                 child: Text(
@@ -56,7 +57,7 @@ class _Register5State extends State<Register5> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               Container(
                   height: 57,
                   width: MediaQuery.of(context).size.width * 0.9,
