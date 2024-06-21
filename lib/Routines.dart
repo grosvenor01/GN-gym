@@ -73,7 +73,7 @@ class _RoutinesState extends State<Routines> {
                 width: 26,
               ),
               Container(
-                height: screenHeight*0.35,
+                height: screenHeight*0.30,
                 width: screenWidth*0.43,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -108,38 +108,13 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Here we are displaying you daily water drink you genrally need 2L per day",
+                        "Drink 8 cups (64 oz or 1.9 liters) of water per day for optimal health or more if needed.",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,
                             color: Color.fromRGBO(138, 138, 138, 1)),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20, right: 10, top: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: LinearProgressIndicator(
-                              backgroundColor:
-                                  Color.fromRGBO(138, 138, 138, 50),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(0, 117, 225, 1),
-                              value: 0.8,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text(
-                            "80%",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 14,
-                              color: Color.fromRGBO(138, 138, 138, 1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
@@ -147,7 +122,7 @@ class _RoutinesState extends State<Routines> {
                 width: 10,
               ),
               Container(
-                height: screenHeight*0.35,
+                height: screenHeight*0.30,
                 width: screenWidth*0.43,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -182,41 +157,17 @@ class _RoutinesState extends State<Routines> {
                     const Padding(
                       padding: EdgeInsets.only(left: 20, right: 10, top: 10),
                       child: Text(
-                        "Your workout percentage is calculated here, Hard look you should achieve the 100% ",
+                        "Aim for 30 minutes of moderate exercise daily.Or follow our Workout plans (3-4days per week)",
                         style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 10,
                             color: Color.fromRGBO(138, 138, 138, 1)),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20, right: 10, top: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: LinearProgressIndicator(
-                              backgroundColor:
-                                  Color.fromRGBO(138, 138, 138, 50),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(255, 0, 0, 1),
-                              value: 0.8,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text(
-                            "80%",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 14,
-                              color: Color.fromRGBO(138, 138, 138, 1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 5,)
             ],
           ),
           SizedBox(
@@ -245,7 +196,7 @@ class _RoutinesState extends State<Routines> {
                 width: 26,
               ),
               Container(
-                height: screenHeight*0.35,
+                height: screenHeight*0.30,
                 width: screenWidth*0.43,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -287,31 +238,6 @@ class _RoutinesState extends State<Routines> {
                             color: Color.fromRGBO(138, 138, 138, 1)),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20, right: 10, top: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: LinearProgressIndicator(
-                              backgroundColor:
-                                  Color.fromRGBO(138, 138, 138, 50),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(244, 206, 20, 1),
-                              value: 0.8,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text(
-                            "80%",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 14,
-                              color: Color.fromRGBO(138, 138, 138, 1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
@@ -319,7 +245,7 @@ class _RoutinesState extends State<Routines> {
                 width: 10,
               ),
               Container(
-                height: screenHeight*0.35,
+                height: screenHeight*0.30,
                 width: screenWidth*0.43,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -361,37 +287,13 @@ class _RoutinesState extends State<Routines> {
                             color: Color.fromRGBO(138, 138, 138, 1)),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 20, right: 10, top: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: LinearProgressIndicator(
-                              backgroundColor:
-                                  Color.fromRGBO(138, 138, 138, 50),
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color.fromRGBO(0, 130, 5, 1),
-                              value: 0.8,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text(
-                            "80%",
-                            style: TextStyle(
-                              fontFamily: "Poppins",
-                              fontSize: 14,
-                              color: Color.fromRGBO(138, 138, 138, 1),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 5,)
             ],
           ),
-          SizedBox(width: 50)
+          SizedBox(height: 50)
         ],
       ),
     );
